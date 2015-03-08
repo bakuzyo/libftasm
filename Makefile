@@ -6,14 +6,15 @@
 #    By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/07 18:24:18 by vbatiot           #+#    #+#              #
-#    Updated: 2015/03/07 18:24:57 by vbatiot          ###   ########.fr        #
+#    Updated: 2015/03/08 18:12:52 by vbatiot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_bzero.s\
+SRC = ft_bzero.s ft_isalpha.s ft_isdigit.s
 
 OBJ = $(SRC:%.s=%.o)
-	NAME = libfts.a
+
+NAME = libfts.a
 
 all: $(NAME)
 
@@ -22,7 +23,7 @@ $(NAME): $(OBJ)
 	ld main.o $(OBJ) -macosx_version_min 10.10 -lSystem
 
 %.o: %.s
-	nasm -f macho64 $<
+	~/.brew/Cellar/nasm/2.11.06/bin/nasm -f macho64 $<
 
 clean:
 	rm -f $(OBJ)
