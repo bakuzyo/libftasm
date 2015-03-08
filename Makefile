@@ -6,11 +6,11 @@
 #    By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/07 18:24:18 by vbatiot           #+#    #+#              #
-#    Updated: 2015/03/08 21:33:38 by vbatiot          ###   ########.fr        #
+#    Updated: 2015/03/08 21:49:11 by vbatiot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ft_bzero.s ft_isalpha.s ft_isdigit.s ft_isalnum.s\
+SRC = ft_bzero.s ft_isalpha.s ft_isdigit.s ft_isalnum.s ft_isascii.s ft_isprint.s\
 
 OBJ = $(SRC:%.s=%.o)
 
