@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/09 17:46:15 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/09 20:04:56 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ extern int		ft_tolower(int c);
 extern char		*ft_strcat(char *s1, char *s2);
 extern void		*ft_memcpy(void *dst, const void *src, size_t n);
 extern void		*ft_memset(void *b, int c, size_t len);
+extern size_t	ft_strlen(const char *s);
 
 void 	check_alnum(void)
 {
@@ -58,23 +59,19 @@ void 	check_digit(void)
 	printf("return = %d\n\n", ft_isdigit(0));
 }
 
-void 	check_alpha(void)
+void	check_alpha(void)
 {
 	printf("Test of ft_isalpha:\n");
 	printf("Test on %c, return = %d\n", 'a', ft_isalpha('a'));
 	printf("Test on %c, return = %d\n", 'z', ft_isalpha('z'));
 	printf("Test on %c, return = %d\n", '*', ft_isalpha('*'));
-	printf("Test on %c, re:\n");
-	printf("Test on %c, return = %c\n", 'a', ft_toupper('a'));
-	printf("Test on %c, return = %c\n", 'z', ft_toupper('z'));
-	printf("Test on %c, return = %c\n", '*', ft_toupper('*'));
-	printf("Test on %c, return = %c\n", 'Z', ft_toupper('Z'));
-	printf("Test on %c, return = %c\n", 'A', ft_toupper('A'));
-	printf("Test on %c, return = %c\n", '0', ft_toupper('0'));
-	printf("Test on %c, return = %c\n", '9', ft_toupper('9'));
-	printf("Test on %c, return = %c\n", '4', ft_toupper('4'));
+	printf("Test on %c, return = %d\n", 'Z', ft_isalpha('Z'));
+	printf("Test on %c, return = %d\n", 'A', ft_isalpha('A'));
+	printf("Test on %c, return = %d\n", '0', ft_isalpha('0'));
+	printf("Test on %c, return = %d\n", '9', ft_isalpha('9'));
+	printf("Test on %c, return = %d\n", '4', ft_isalpha('4'));
 	printf("Test with NULL, ");
-	printf("return = %c\n\n", ft_toupper(0));
+	printf("return = %d\n\n", ft_isalpha(0));
 }
 
 void 	check_isascii(void)
@@ -149,12 +146,12 @@ void 	check_strlen(void)
 	printf("sized: %d\n\n", (int)ft_strlen(0));
 }
 
-void 	check_puts(void)
+/*void 	check_puts(void)
 {
 	printf("Test of ft_puts:\n");
 
 	ft_puts("FT_PUTS CALLED\n\n");
-}
+}*/
 
 void 	check_memcpy(void)
 {
@@ -173,7 +170,7 @@ void 	check_memcpy(void)
 	printf("Str1 size: %d, Content: %s\n", (int)ft_strlen(str), str);
 	printf("Str2 size: %d, Content: %s\n\n", (int)ft_strlen(str2), str2);
 }
-
+/*
 void 	check_strdup(void)
 {
 	char 	str;
@@ -188,7 +185,7 @@ void 	check_strdup(void)
 	printf("Str after strdup (\"%s\") %d\n", str, (int)ft_strlen(str));
 	str = ft_strdup(t);
 	printf("Str after strdup (\"%s\") %d\n\n", str, (int)ft_strlen(str));
-}
+}*/
 
 void	check_memset(void)
 {
@@ -208,7 +205,7 @@ void 	check_strcat(void)
 	printf("Str: %s\n", ft_strcat(str, "e"));
 	printf("Str: %s\n\n", ft_strcat(str, "llo"));
 }
-
+/*
 void 	check_cat(void)
 {
 	int fd;
@@ -218,8 +215,8 @@ void 	check_cat(void)
 	ft_cat(fd);
 	printf("\n\n");
 	close(fd);
-}
-
+}*/
+/*
 void 	check_b(void)
 {
 	printf("Test of ft_puts v2.0\n");
@@ -227,7 +224,7 @@ void 	check_b(void)
 	printf(" => return : %d\n", ft_puts("$#@#',./,~!@~=+"));
 	printf("Test with null\n");
 	printf(" => return : %d\n\n", ft_puts(NULL));
-}
+}*/
 
 void	check_islower(void)
 {
@@ -265,11 +262,13 @@ int main(void){
 	check_toupper();   
 	check_isascii();
 	check_bzero();
-	//check_strlen();
+	check_strlen();
+	//check_puts();
 	//check_strdup();
-	//check_memset();
-	//check_strcat();
-	//check_memcpy();
+	check_memset();
+	check_strcat();
+	check_memcpy();
 	//check_cat();
+	//check_b();
 	return 0;
 }

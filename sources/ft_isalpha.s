@@ -1,27 +1,27 @@
 section .text
-global _ft_isalpha
+	global _ft_isalpha
 
 _ft_isalpha:
-push	rbp
-mov		rbp, rsp
+	push	rbp
+	mov		rbp, rsp
 
-cmp		rdi, 'A'
-jl		cancel
-cmp		edi, 'z'
-jg		cancel
-cmp		edi, 'Z'
-jle		confirm
-cmp		edi, 'a'
-jge		confirm
+	cmp		edi, 'A'
+	jl		nope
+	cmp		edi, 'z'
+	jg		nope
+	cmp		edi, 'Z'
+	jle		yes
+	cmp		edi, 'a'
+	jge		yes
 
-cancel:
-xor		rax, rax
+nope:
+	xor		rax, rax
 
-leave
-ret
+	leave
+	ret
 
-confirm:
-mov		rax, 1
+yes:
+	mov		rax, 1
 
-leave
-ret
+	leave
+	ret

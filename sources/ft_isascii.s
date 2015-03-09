@@ -6,7 +6,7 @@ _ft_isascii:
 	push	rbp
 	mov		rbp, rsp
 
-	cmp		rdi, 0
+	cmp		rdi, 1
 	jl		cancel
 	cmp		rdi, 127
 	jg		cancel
