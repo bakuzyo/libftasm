@@ -11,11 +11,18 @@ _ft_bzero:
 	mov		rbx, rdi
 
 start: 
+	cmp		rdi, 0
+	je		cancel
 	mov 	byte [rbx], 0
 	inc		rbx
 	inc		rcx
 	cmp		rcx, rsi
 	jne		start
 
-leave
-ret
+	leave
+	ret
+
+cancel:
+	mov		rax, 0
+	leave
+	ret

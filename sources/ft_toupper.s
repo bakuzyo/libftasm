@@ -17,6 +17,6 @@ _ft_toupper:
 	ret
 
 cancel:
-	mov		rax, 0
+	mov		rax, rdi
 	leave
 	ret

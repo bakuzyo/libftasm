@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/09 20:04:56 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/10 18:45:47 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,13 @@ extern int		ft_isascii(int c);
 extern int		ft_isprint(int c);
 extern int		ft_toupper(int c);
 extern int		ft_tolower(int c);
+extern int		ft_islower(int c);
+extern int		ft_isupper(int c);
 extern char		*ft_strcat(char *s1, char *s2);
 extern void		*ft_memcpy(void *dst, const void *src, size_t n);
 extern void		*ft_memset(void *b, int c, size_t len);
 extern size_t	ft_strlen(const char *s);
+extern int		ft_puts(const char *s);
 
 void 	check_alnum(void)
 {
@@ -132,7 +135,7 @@ void	check_bzero(void)
 	printf("Test with NULL\n\n");
 	ft_bzero(NULL, 5);
 }
-
+/*
 void 	check_strlen(void)
 {
 	char str[5] = "abcd";
@@ -145,13 +148,13 @@ void 	check_strlen(void)
 	printf("Test with NULL, ");
 	printf("sized: %d\n\n", (int)ft_strlen(0));
 }
-
-/*void 	check_puts(void)
+*/
+void 	check_puts(void)
 {
 	printf("Test of ft_puts:\n");
 
 	ft_puts("FT_PUTS CALLED\n\n");
-}*/
+}
 
 void 	check_memcpy(void)
 {
@@ -216,7 +219,7 @@ void 	check_cat(void)
 	printf("\n\n");
 	close(fd);
 }*/
-/*
+
 void 	check_b(void)
 {
 	printf("Test of ft_puts v2.0\n");
@@ -224,7 +227,7 @@ void 	check_b(void)
 	printf(" => return : %d\n", ft_puts("$#@#',./,~!@~=+"));
 	printf("Test with null\n");
 	printf(" => return : %d\n\n", ft_puts(NULL));
-}*/
+}
 
 void	check_islower(void)
 {
@@ -262,13 +265,13 @@ int main(void){
 	check_toupper();   
 	check_isascii();
 	check_bzero();
-	check_strlen();
-	//check_puts();
+	//check_strlen();
+	check_puts();
 	//check_strdup();
 	check_memset();
 	check_strcat();
 	check_memcpy();
 	//check_cat();
-	//check_b();
+	check_b();
 	return 0;
 }

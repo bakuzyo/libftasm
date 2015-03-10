@@ -6,7 +6,7 @@
 #    By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/09 16:17:58 by vbatiot           #+#    #+#              #
-#    Updated: 2015/03/09 18:36:50 by vbatiot          ###   ########.fr        #
+#    Updated: 2015/03/10 18:11:25 by vbatiot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC_NAME =	ft_bzero.s\
 			ft_memcpy.s\
 			ft_memset.s\
 			ft_strlen.s\
+			ft_puts.s\
 
 OBJ_PATH = ./obj/
 OBJ_NAME = $(SRC_NAME:.s=.o)

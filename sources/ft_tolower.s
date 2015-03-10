@@ -17,6 +17,6 @@ _ft_tolower:
 	ret
 
 cancel:
-	mov		rax, 0
+	mov		rax, rdi
 	leave
 	ret
