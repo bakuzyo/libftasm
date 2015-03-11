@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/10 18:45:47 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/11 17:20:04 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,7 +219,7 @@ void 	check_cat(void)
 	printf("\n\n");
 	close(fd);
 }*/
-
+/*
 void 	check_b(void)
 {
 	printf("Test of ft_puts v2.0\n");
@@ -227,7 +227,7 @@ void 	check_b(void)
 	printf(" => return : %d\n", ft_puts("$#@#',./,~!@~=+"));
 	printf("Test with null\n");
 	printf(" => return : %d\n\n", ft_puts(NULL));
-}
+}*/
 
 void	check_islower(void)
 {
@@ -269,9 +269,9 @@ int main(void){
 	check_puts();
 	//check_strdup();
 	check_memset();
-	check_strcat();
 	check_memcpy();
+	check_strcat();
 	//check_cat();
-	check_b();
+	//check_b();
 	return 0;
 }
