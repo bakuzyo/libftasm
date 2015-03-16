@@ -25,8 +25,6 @@ buff2:
 
 cancelled:
 	mov		byte [rbx], 0
-	leave
-	ret
 
 cancel:
 	mov		rax, rdi

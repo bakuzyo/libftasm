@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/11 17:20:04 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/16 03:38:19 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ extern void		*ft_memcpy(void *dst, const void *src, size_t n);
 extern void		*ft_memset(void *b, int c, size_t len);
 extern size_t	ft_strlen(const char *s);
 extern int		ft_puts(const char *s);
+extern void		ft_cat(int fd);
 
 void 	check_alnum(void)
 {
@@ -135,7 +136,7 @@ void	check_bzero(void)
 	printf("Test with NULL\n\n");
 	ft_bzero(NULL, 5);
 }
-/*
+
 void 	check_strlen(void)
 {
 	char str[5] = "abcd";
@@ -148,7 +149,7 @@ void 	check_strlen(void)
 	printf("Test with NULL, ");
 	printf("sized: %d\n\n", (int)ft_strlen(0));
 }
-*/
+
 void 	check_puts(void)
 {
 	printf("Test of ft_puts:\n");
@@ -195,7 +196,7 @@ void	check_memset(void)
 	printf("[+] MEMSET [+]\n");
 	printf("[-] Befor memset: %s [-]\n", "abcd");
 	printf("[-] After memset: %s [-]\n", (char*)ft_memset(strdup("abcd"), 'A', 3));
-	printf("[+] END OF MEMSET [+]\n");
+	printf("[+] END OF MEMSET [+]\n\n");
 }
 
 void 	check_strcat(void)
@@ -208,7 +209,7 @@ void 	check_strcat(void)
 	printf("Str: %s\n", ft_strcat(str, "e"));
 	printf("Str: %s\n\n", ft_strcat(str, "llo"));
 }
-/*
+
 void 	check_cat(void)
 {
 	int fd;
@@ -218,7 +219,7 @@ void 	check_cat(void)
 	ft_cat(fd);
 	printf("\n\n");
 	close(fd);
-}*/
+}
 /*
 void 	check_b(void)
 {
@@ -227,8 +228,8 @@ void 	check_b(void)
 	printf(" => return : %d\n", ft_puts("$#@#',./,~!@~=+"));
 	printf("Test with null\n");
 	printf(" => return : %d\n\n", ft_puts(NULL));
-}*/
-
+}
+*/
 void	check_islower(void)
 {
 	printf("Test of ft_islower:\n");
@@ -265,13 +266,13 @@ int main(void){
 	check_toupper();   
 	check_isascii();
 	check_bzero();
-	//check_strlen();
+	check_strlen();
 	check_puts();
 	//check_strdup();
 	check_memset();
 	check_memcpy();
 	check_strcat();
-	//check_cat();
+	check_cat();
 	//check_b();
 	return 0;
 }
