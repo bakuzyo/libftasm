@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/16 03:38:19 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/25 11:20:31 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ extern void		*ft_memset(void *b, int c, size_t len);
 extern size_t	ft_strlen(const char *s);
 extern int		ft_puts(const char *s);
 extern void		ft_cat(int fd);
+extern char		*ft_strdup(const char *s1);
 
 void 	check_alnum(void)
 {
@@ -174,22 +175,24 @@ void 	check_memcpy(void)
 	printf("Str1 size: %d, Content: %s\n", (int)ft_strlen(str), str);
 	printf("Str2 size: %d, Content: %s\n\n", (int)ft_strlen(str2), str2);
 }
-/*
-void 	check_strdup(void)
-{
-	char 	str;
-	char 	f[] = "h";
-	char 	s[] = "hello";
-	char 	t[] = "";
 
-	printf("Test of ft_strdup:\n");
+void		check_strdup(void)
+{
+	char		*str;
+	char		f[] = "h";
+	char		s[] = "hello";
+	char		t[] = "";
+
+	printf("[+] STRDUP [+]\n");
+	printf("[-] Str init [-]\n");
 	str = ft_strdup(f);
-	printf("Str after strdup (\"%s\") %d\n", str, (int)ft_strlen(str));
+	printf("[-] Str after strdup (\"%s\") %d [-]\n", str, (int)ft_strlen(str));
 	str = ft_strdup(s);
-	printf("Str after strdup (\"%s\") %d\n", str, (int)ft_strlen(str));
+	printf("[-] Str after strdup (\"%s\") %d [-]\n", str, (int)ft_strlen(str));
 	str = ft_strdup(t);
-	printf("Str after strdup (\"%s\") %d\n\n", str, (int)ft_strlen(str));
-}*/
+	printf("[-] Str after strdup (\"%s\") %d [-]\n", str, (int)ft_strlen(str));
+	printf("[+] END OF STRDUP [+]\n");
+}
 
 void	check_memset(void)
 {
@@ -268,7 +271,7 @@ int main(void){
 	check_bzero();
 	check_strlen();
 	check_puts();
-	//check_strdup();
+	check_strdup();
 	check_memset();
 	check_memcpy();
 	check_strcat();

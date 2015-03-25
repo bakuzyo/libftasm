@@ -6,7 +6,7 @@
 #    By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/09 16:17:58 by vbatiot           #+#    #+#              #
-#    Updated: 2015/03/16 02:11:48 by vbatiot          ###   ########.fr        #
+#    Updated: 2015/03/25 11:23:57 by vbatiot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC_NAME =	ft_bzero.s\
 			ft_strlen.s\
 			ft_puts.s\
 			ft_cat.s\
+			ft_strdup.s\
 
 OBJ_PATH = ./obj/
 OBJ_NAME = $(SRC_NAME:.s=.o)

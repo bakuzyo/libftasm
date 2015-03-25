@@ -1,5 +1,5 @@
 %define BUFF_SIZE 42
-%define SYSCALL(n) 0x2000000 | n
+%define SYSCALL(n) 0x2000000
 
 section			.bss
 		buffer		resb		BUFF_SIZE
@@ -15,14 +15,14 @@ __read:
 		push		rdi
 		mov			rsi, buffer
 		mov			rdx, BUFF_SIZE
-		mov			rax, SYSCALL(3) ; read
+		mov			rax, SYSCALL(3)
 		syscall
 		jc			end
 		cmp			rax, 0
 		jle			end
 		mov			rdi, 1
 		mov			rdx, rax
-		mov			rax, SYSCALL(4) ; write
+		mov			rax, SYSCALL(4)
 		syscall
 		pop			rdi
 		jmp			__read
