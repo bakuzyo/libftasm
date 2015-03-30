@@ -1,3 +1,6 @@
+section .data
+	msg db		"NULL"
+
 section .text
 	global _ft_puts
 
@@ -16,6 +19,13 @@ _ft_puts:
 	syscall
 	inc		rbx
 	jmp		loop
+	cmp		rdi, 0
+	je		perror
+
+perror:
+	//FINIR LA COUCOU
+	leave
+	ret
 
 cancel:
 	leave

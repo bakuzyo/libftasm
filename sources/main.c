@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/25 11:20:31 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/30 16:25:32 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,7 +191,7 @@ void		check_strdup(void)
 	printf("[-] Str after strdup (\"%s\") %d [-]\n", str, (int)ft_strlen(str));
 	str = ft_strdup(t);
 	printf("[-] Str after strdup (\"%s\") %d [-]\n", str, (int)ft_strlen(str));
-	printf("[+] END OF STRDUP [+]\n");
+	printf("[+] END OF STRDUP [+]\n\n");
 }
 
 void	check_memset(void)
@@ -212,7 +212,7 @@ void 	check_strcat(void)
 	printf("Str: %s\n", ft_strcat(str, "e"));
 	printf("Str: %s\n\n", ft_strcat(str, "llo"));
 }
-
+/*
 void 	check_cat(void)
 {
 	int fd;
@@ -223,7 +223,7 @@ void 	check_cat(void)
 	printf("\n\n");
 	close(fd);
 }
-/*
+*/
 void 	check_b(void)
 {
 	printf("Test of ft_puts v2.0\n");
@@ -232,7 +232,7 @@ void 	check_b(void)
 	printf("Test with null\n");
 	printf(" => return : %d\n\n", ft_puts(NULL));
 }
-*/
+
 void	check_islower(void)
 {
 	printf("Test of ft_islower:\n");
@@ -275,7 +275,7 @@ int main(void){
 	check_memset();
 	check_memcpy();
 	check_strcat();
-	check_cat();
-	//check_b();
+	//check_cat();
+	check_b();
 	return 0;
 }
