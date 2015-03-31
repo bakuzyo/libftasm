@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/30 16:25:32 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/03/31 16:19:53 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,18 +212,18 @@ void 	check_strcat(void)
 	printf("Str: %s\n", ft_strcat(str, "e"));
 	printf("Str: %s\n\n", ft_strcat(str, "llo"));
 }
-/*
+
 void 	check_cat(void)
 {
 	int fd;
 
-	fd = open("auteur", O_RDONLY);
+	fd = open("ft_bzero.s", O_RDONLY);
 	printf("Test of ft_cat:\n");
 	ft_cat(fd);
 	printf("\n\n");
 	close(fd);
 }
-*/
+
 void 	check_b(void)
 {
 	printf("Test of ft_puts v2.0\n");
@@ -275,7 +275,7 @@ int main(void){
 	check_memset();
 	check_memcpy();
 	check_strcat();
-	//check_cat();
+	check_cat();
 	check_b();
 	return 0;
 }

@@ -1,6 +1,3 @@
-section .data
-	msg db		"NULL"
-
 section .text
 	global _ft_puts
 
@@ -9,7 +6,9 @@ _ft_puts:
 	mov		rbp, rsp
 	mov		rbx, rdi
 
-	loop:
+loop:
+	cmp		rdi, 0
+	je		error
 	cmp		byte [rbx], 0
 	je		cancel
 	mov		rdi, 1
@@ -19,14 +18,12 @@ _ft_puts:
 	syscall
 	inc		rbx
 	jmp		loop
-	cmp		rdi, 0
-	je		perror
 
-perror:
-	//FINIR LA COUCOU
+cancel:
 	leave
 	ret
 
-cancel:
+error:
+	mov		rax, 0
 	leave
 	ret
