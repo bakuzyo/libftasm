@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/03/31 16:19:53 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/04/01 11:12:16 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,7 +217,7 @@ void 	check_cat(void)
 {
 	int fd;
 
-	fd = open("ft_bzero.s", O_RDONLY);
+	fd = open("auteur", O_RDONLY);
 	printf("Test of ft_cat:\n");
 	ft_cat(fd);
 	printf("\n\n");
