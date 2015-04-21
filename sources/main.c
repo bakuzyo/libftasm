@@ -6,7 +6,7 @@
 /*   By: vbatiot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/07 13:53:29 by vbatiot           #+#    #+#             */
-/*   Updated: 2015/04/01 13:23:48 by vbatiot          ###   ########.fr       */
+/*   Updated: 2015/04/21 15:01:55 by vbatiot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,9 @@ void	check_bzero(void)
 	printf("str[2] = %d = %c\n", str[2], str[2]);
 	printf("Test with NULL\n\n");
 	ft_bzero(NULL, 5);
+	printf("str[0] = %d = %c\n", str[0], str[0]);
+	printf("str[1] = %d = %c\n", str[1], str[1]);
+	printf("str[2] = %d = %c\n", str[2], str[2]);
 }
 
 void 	check_strlen(void)
